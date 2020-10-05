@@ -8,7 +8,7 @@ React component library starter pack. It builds ES module library. It is using:
 - ESLint
 - Jest
 - Testing-Library
-- Prettier`
+- Prettier
 
 ## Install
 
@@ -16,7 +16,7 @@ React component library starter pack. It builds ES module library. It is using:
 
 ```bash
 npm install -g degit
-degit @imagemarker/libre my-new-project
+degit imagemarker/libre my-new-project
 ```
 
 ## Usage
