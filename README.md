@@ -1,14 +1,14 @@
-# libre
+# libRe
 
-React component library starter pack. It builds ES module library. It is using:
+React component library starter pack.
 
-- React, ReactDOM dev & peer dependencies
-- TypeScript
+- React 17+ component library settings
 - RollupJS
+- TypeScript
 - ESLint
+- Prettier
 - Jest
 - Testing-Library
-- Prettier
 
 ## Install
 
@@ -17,17 +17,29 @@ React component library starter pack. It builds ES module library. It is using:
 ```bash
 npm install -g degit
 degit imagemarker/libre my-new-project
-```
+``` 
+
+- Update `LICENSE.md` and `package.json` files with your information.
 
 ## Usage
- 
-Change the settings below:
 
-- `package.json` name, repository etc.
-- `rollup.config.js` change output.name
-- `LICENSE.md` add your contact
-- `types.d.ts` add your global types and import with `@base/types`
-- `src/index.ts` add your component exports and import with `@base/src/..`
+- Install
+
+```bash
+yarn
+# OR
+npm i
+```
+
+- Run examples
+
+```bash
+yarn start
+# OR
+npm start
+```
+
+Please see other npm scripts in package.json
 
 ## License
 
@@ -35,4 +47,3 @@ Change the settings below:
 
 Please see [License File](LICENSE.md) for more information.
 
-[link-author]: https://github.com/imagemarker

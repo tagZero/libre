@@ -1,27 +1,45 @@
-import typescript from '@rollup/plugin-typescript';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from "rollup-plugin-terser";
+import ts from "@wessberg/rollup-plugin-ts";
 
 const production = process.env.NODE_ENV === 'production';
 
+const output = {
+  sourcemap: !production,
+  globals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM',
+  },
+}
+
 export default {
   input: './src/index.ts',
-  output: {
-    dir: 'dist',
-    name: 'libre',
-    sourcemap: production ? 'none' : 'inline',
-    format: 'es',
-    globals: {
-      'react': 'React',
-      'react-dom': 'ReactDOM',
+  output: [
+    {
+      ...output,
+      file: 'dist/cjs/index.js',
+      format: 'cjs'
     },
-  },
+    {
+      ...output,
+      file: 'dist/es/index.js',
+      format: 'es'
+    }
+  ],
   external: ['react', 'react-dom'],
   plugins: [
-    typescript(),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE)
+    }),
+    ts(),
     postcss({
       extract: false,
       use: ['sass']
+    }),
+    nodeResolve({
+      browser: true
     }),
     production ? terser() : null
   ]
