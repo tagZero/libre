@@ -1,6 +1,9 @@
 # libRe
 
-React component library starter pack.
+[![License][license-src]][license-href]
+
+
+React component library starter template.
 
 - React 17+ component library settings
 - RollupJS
@@ -16,7 +19,7 @@ React component library starter pack.
 
 ```bash
 npm install -g degit
-degit imagemarker/libre my-new-project
+degit tagzero/libre my-new-project
 ``` 
 
 - Update `LICENSE.md` and `package.json` files with your information.
@@ -41,9 +44,5 @@ npm start
 
 Please see other npm scripts in package.json
 
-## License
-
-![The MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)
-
-Please see [License File](LICENSE.md) for more information.
-
+[license-src]: https://img.shields.io/badge/license-MIT-brightgreen.svg
+[license-href]: LICENSE.md
