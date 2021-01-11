@@ -2,7 +2,10 @@
   "name": "@tag0/libre",
   "version": "1.0.0",
   "description": "React component library template",
-  "repository": "github:TagZero/libre",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TagZero/libre.git"
+  },
   "keywords": [
     "react",
     "components",

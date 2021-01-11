@@ -1,4 +1,4 @@
-# libRe
+# LibRe
 
 [![License][license-src]][license-href]
 
@@ -22,7 +22,7 @@ npm install -g degit
 degit tagzero/libre my-new-project
 ``` 
 
-- Update `LICENSE.md` and `package.json` files with your information.
+- Update `LICENSE.md` and `package.json` files with your information. Add `private: true` to package.json if your repository is private.
 
 ## Usage
 
